@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+
+    <title>Envoyer une photo ou un PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            padding-top: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+            text-align: left;
+            width: 100%;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="submit"], button {
+            padding: 12px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover, button:hover {
+            background-color: black;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .verSite {
+           margin-left: 130px;
+        }
+
+        .verSite a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .verSite a:hover {
+            color: orange;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Envoyez vos documents</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
+
+            <label for="email">Votre e-mail :</label>
+            <input type="email" id="email" name="email" required placeholder="Entrez votre e-mail">
+
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required placeholder="Entrez votre téléphone">
+
+            <p class="section-title">Documents à envoyer</p>
+
+            <label for="passeport">Photo du passeport :</label>
+            <input type="file" id="passeport" name="passeport" accept="image/*, .pdf" required>
+
+            <label for="diplome">Dernier diplôme :</label>
+            <input type="file" id="diplome" name="diplome" accept="image/*, .pdf" required>
+
+            <label for="releves">Relevés de notes :</label>
+            <input type="file" id="releves" name="releves" accept="image/*, .pdf" required>
+
+            <p class="section-title">Personne à contacter en cas d'urgence</p>
+
+            <label for="contact_nom">Nom :</label>
+            <input type="text" id="contact_nom" name="contact_nom" required placeholder="Nom du contact">
+
+            <label for="contact_prenom">Prénom :</label>
+            <input type="text" id="contact_prenom" name="contact_prenom" required placeholder="Prénom du contact">
+
+            <label for="contact_naissance">Date de naissance :</label>
+            <input type="date" id="contact_naissance" name="contact_naissance" required>
+
+            <label for="contact_lien">Lien parental :</label>
+            <input type="text" id="contact_lien" name="contact_lien" required placeholder="Ex : Père, Mère, Frère...">
+
+            <label for="contact_telephone">Téléphone :</label>
+            <input type="tel" id="contact_telephone" name="contact_telephone" required placeholder="Téléphone du contact">
+
+            <label for="contact_email">E-mail :</label>
+            <input type="email" id="contact_email" name="contact_email" required placeholder="E-mail du contact">
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="footer">
+            <p>En cas de problème, contactez-nous <a href="mailto:pythamoua@gmail.com">ici</a>.</p>
+        </div>
+    </div>
+
+    <div class="verSite">
+        <a href="{{ url_for('entrance') }}" target="_blank">Allez sur notre site internet <i class="material-icons">arrow_forward</i></a>
+    </div>
+    
+    
+
+</body>
+</html>

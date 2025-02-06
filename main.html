@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="website icon" href="LOGO.png">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Modale.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRUSSE225 Voyages - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero {
+            
+            background-image: url('./avion.png'); /* Image de fond */
+           background-repeat: no-repeat;
+            color: white;
+            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .hero .logo img{
+            width: 600px;
+            width: 350px;
+        }
+        .smsAcceuil{
+            margin-left: 300px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #575757;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #575757;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: orange;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color:black;
+            color: #f4f4f4;
+        }
+
+        .services, .reservation, .gallery {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .services h2, .reservation h2, .gallery h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .services .service, .gallery img {
+            display: inline-block;
+            margin: 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .services .service img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .form-container i{
+            font-size: 14px;
+        }
+        .form-container span{
+            color: orangered;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MRUSSE225 </h1>
+        <p>Explorez le monde avec nous</p>
+    </header>
+
+    <nav>
+        <a href="http://127.0.0.1:5500/templates/entrance.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="#services"><i class="fas fa-map-marker-alt"></i> Destinations</a>
+        <a href="#reservation"><i class="fas fa-calendar-check"></i> Réservation</a>
+        <a href="#contact" id="contact-link"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+    <!-- Modale avec les réseaux sociaux -->
+<div id="socialModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <h2>Suivez-nous sur nos réseaux sociaux</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/share/18ah7FQbW8/?mibextid=wwXIfr" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/d.pytha/profilecard/?igsh=MWk5enNyOGxxaGpsYw==" target="_blank">Instagram</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Telegram</a></li>
+            <li><a href="https://wa.me/message/XTQKCCN4ZCN7L1" target="_blank">WhatsApp</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+    <section class="hero">
+        <div class="logo">
+            <img src="LOGO.png" alt="logo">
+        </div>
+        <div class="smsAcceuil">
+        <h1>Bienvenue chez MRUSSE225</h1>
+        <p>Découvrez des expériences uniques et inoubliables à travers le monde.</p>
+       <a href="#reservation"><button class="Reservation " >Réservez Maintenant</button></a> </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Nos Meilleures Destinations avec Bourses d'Etude</h2>
+        <div class="service">
+            <div class="service-image">
+               <a href="https://mobility.smarts-up.fr/" target="_blank"><img src="eifel.png" alt="Destination 1"></a> 
+            </div>
+            <h3>Paris, France</h3>
+            <p>Découvrez la Bourse SMART-UP.</p>
+        </div>
+        <div class="service">
+            <div class="service-image">
+             <a href="http://www.mae.ro/en/node/10253/" target="_blank"><img src="Broumanie.png" alt="Destination 2"></a>   
+            </div>
+            <h3>Bourse du gouvernement de Roumanie</h3>
+            <p>Postulez a la nouvelle bourse de financement</p>
+        </div>
+        <div class="service">
+            <div class="service-image">
+               <a href="https://apply.ista.ac.at/users/login" target="_blank"><img src="Astria.png" alt="Autriche"></a> 
+            </div>
+            <h3>Autriche</h3>
+            <p>Plongez dans l'histoire de la plus belle Universite.</p>
+        </div>
+        <div class="service">
+            <div class="serviceexplore-more">
+                <a href="#" onclick="openForm()">
+                    <i class="fas fa-arrow-right"></i>
+                    <h3>Explorez d'autres destinations</h3>
+                </a>
+                <p>De nombreuses autres destinations à découvrir !</p>
+            </div>
+        </div>
+    
+        <div class="overlay" id="formOverlay">
+            <div class="form-container">
+                
+                   <span>Attention</span>: <i>vous passez au compte Premium <br>
+                     les frais sont de <span>5000 FCFA ou 10$/ mois</span></i>
+                    <p>Ce compte vous permettra  de postuler aux offres de bourses du moment <br>
+                    On vous donnera les details sur le processus de candidature de certaines Bourse</p>
+                    <a href="main.html"><button>Retour</button></a> <br><br>
+               <a href="https://flaskblock.onrender.com/"> <button >Continuer</button></a>
+            </div>
+        </div>
+    
+           
+        </div>
+    </section>
+    <script>
+        function openForm() {
+            document.getElementById('formOverlay').style.display = 'flex';
+        }
+
+        function submitForm() {
+            const nom = document.getElementById('nom').value;
+            const prenom = document.getElementById('prenom').value;
+            const telephone = document.getElementById('telephone').value;
+
+            if (nom && prenom && telephone) {
+                alert(`Nom: ${nom}\nPrénom: ${prenom}\nTéléphone: ${telephone}`);
+                document.getElementById('formOverlay').style.display = 'none';
+            } else {
+                alert('Veuillez remplir tous les champs.');
+            }
+        }
+    </script>
+    
+    <style>
+        /* css du bouton explorer plus*/
+        
+
+        .serviceexplore-more {
+            text-align: center;
+        }
+
+        .serviceexplore-more a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .serviceexplore-more a:hover {
+            color: #0056b3;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            transform: scale(0.5);
+            animation: zoomIn 0.5s forwards;
+        }
+
+        .form-container h2 {
+            margin: 0 0 20px;
+            text-align: center;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        /* Section principale */
+        .services {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .services h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+    
+        .service {
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            transition: transform 0.3s ease-in-out; /* Zoom sur le conteneur */
+        }
+    
+        .service:hover {
+            transform: scale(1.05); /* Légère mise en relief au survol */
+        }
+        .serviceexplore-more{
+            cursor: pointer;
+        }
+        .serviceexplore-more i:hover{
+            color: orange;
+        }
+    
+        /* Conteneur pour les images */
+        .service-image {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 10px; /* Bords arrondis */
+        }
+    
+        /* Style des images */
+        .service-image img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: border 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+    
+        /* Effet de bordure orange et ombre au survol */
+        .service-image:hover img {
+            border: 5px solid orange;
+            box-shadow: 0 0 15px orange; /* Glow autour de l'image */
+        }
+    
+        /* Texte */
+        .service h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+    
+        .service p {
+            font-size: 1em;
+            color: #555;
+        }
+        .service .NEXT i{
+            margin-top: -30px;
+            width: 200px;
+            height: 100px;
+        }
+        .doc{
+            width: 500px;
+            height: 80px;
+            font-size: 20px;
+            background-color: orange;
+            color: #fff;
+            cursor:pointer;
+            border-radius: 10px;
+        }
+        .doc:hover{
+            background-color: #111;
+            color: #f4f4f4;
+        }
+    </style>
+    
+
+    <section class="reservation" id="reservation">
+        <h2>Sollicitez nos services : PROCEDURE OU CONSULTATION</h2>
+        <a href="templates/Formulaire.html"><button class="doc">CLIQUEZ ICI ET ENVOYEZ NOUS VOS DOCUMENTS</button></a>
+    </section>
+
+    <section class="gallery">
+        <h2>Galerie</h2>
+        <div class="gallery-item">
+            <img src="diplomes.jpg" alt="Image 1" >
+           <a href="#" target="_blank"><div class="caption">Confiez nous votre procedure</div></a> 
+        </div>
+        <div class="gallery-item">
+            <img src="travail2.jpg" alt="Image 2">
+           <a href="Travail.html" target="_blank"><div class="caption">Voyage & Travail</div></a> 
+        </div>
+        <div class="gallery-item">
+            <img src="Travail.jpg" alt="Image 3">
+            <a href="Tourisme.html" target="_blank"><div class="caption">Tourisme</div></a>
+        </div>
+    </section>
+    
+    <style>
+        .caption:hover{
+            background-color: orange;
+            opacity: 0.5;
+        }
+        .gallery {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .gallery h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+    
+        .gallery-item {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Zoom léger sur l'image */
+        }
+    
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: left;
+            font-size: 1.2em;
+            transform: translateX(-100%); /* Commence en dehors de l'écran */
+            opacity: 0; /* Invisible par défaut */
+            transition: transform 0.5s ease, opacity 0.5s ease; /* Animation */
+        }
+    
+        .gallery-item:hover .caption {
+            transform: translateX(0); /* Se déplace de gauche à droite */
+            opacity: 1; /* Devient visible */
+        }
+    </style>
+    <div class="FeedBacks">
+        <h3>Quelques Videos de Feedbacks Etudiants</h3><br>
+        <div class="FeedbackVideos">
+            <div class="video-container">
+                <video >
+                    <source src="IMG_4258.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+                <video >
+                    <source src="IMG_2171.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+                <video>
+                    <source src="IMG_2387.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+                <video >
+                    <source src="IMG_2388.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+       
+           
+                <video >
+                    <source src="IMG_2698.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+                <video >
+                    <source src="IMG_4261.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+                <video >
+                    <source src="IMG_4253.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+                <video>
+                    <source src="IMG_3365.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéo.
+                </video>
+          
+        </div><br><br>
+        <style>
+/* Format de video*/
+.FeedBacks h3{
+    text-align: center;
+}
+.video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        video {
+            width: 30%;
+            max-width: 400px;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        video:hover {
+            cursor: pointer;
+        }
+
+        .zoom {
+            transform: scale(1.5);
+        }
+
+.FeedbackVideos{
+    gap: 20px;
+}
+
+
+        video {
+            width: 80%;
+            max-width: 150px;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        video:hover {
+            cursor: pointer;
+        }
+
+        .zoom {
+            transform: scale(1.5);
+        }
+
+
+        </style>
+    
+       
+
+        </div>
+    </div>
+    <script>
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.addEventListener('mouseover', () => {
+                video.play();
+            });
+            video.addEventListener('mouseout', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+            video.addEventListener('click', () => {
+                video.classList.toggle('zoom');
+            });
+        });
+    </script>
+    
+
+    <footer>
+        <p>&copy; 2025 MRUSSE225. Tous droits réservés.</p>
+        <p>Contactez-nous : pythamoua@gmail.com</p>
+    </footer>
+    <script>
+        // Obtenir les éléments
+        const contactLink = document.getElementById("contact-link");
+        const modal = document.getElementById("socialModal");
+        const closeBtn = document.getElementById("close-btn");
+    
+        // Ouvrir la modale lorsque l'utilisateur clique sur "Contact"
+        contactLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+            modal.style.display = "flex"; // Afficher la modale
+        });
+    
+        // Fermer la modale lorsque l'utilisateur clique sur la croix
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+    
+        // Fermer la modale lorsque l'utilisateur clique en dehors de la modale
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+
+        const revealOnScroll = () => {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8;
+
+                if (sectionTop < triggerPoint) {
+                    section.classList.add("visible");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll(); // Reveal on initial load
+    </script>
+</body>
+<div class="AuthorSection">
+    <img src="Author.jpg" alt="PhotoAuteur">
+    <div class="fonction">
+        <li>Auteur : <span>Agoua Moua</span></li>
+    <li>Distinctions : Doctorat ,Modélisation mathématique, méthodes numériques et progiciels <br>
+    - Ingenieur and Data-Scientist [Machine Learning]<br>
+    - Developeur web [Python React-Native]</li>
+    <li>Fondateur <span>PythAcademy</span></li>
+    <li>Credit@ Uv Polytechnique of Science @Data</li>
+    <li>Immigration par Bourse à l'Étranger
+        Bienvenue sur notre plateforme dédiée à l’accompagnement des étudiants souhaitant poursuivre leurs études à l’international grâce à des bourses.<br>
+         Nous offrons des services personnalisés pour vous guider tout au long de votre processus de candidature,<br>
+          depuis la recherche de bourses adaptées à votre profil jusqu’à l’obtention de votre visa.<br>
+           Grâce à notre expertise, nous facilitons votre projet d’immigration en vous fournissant les outils nécessaires pour réussir dans vos démarches administratives et académiques.</li>
+    <li></li></div>
+    
+</div>
+<div class="finSpace">
+
+</div>
+<style>
+    .finSpace{
+        height: 50px;
+        background-color: orange;
+        margin-top: 5px;
+    }
+    .fonction span{
+        color: #007BFF;
+       
+    }
+    .fonction li{
+         list-style: none;
+    }
+    .fonction{
+       align-items: center;
+       margin-top: 150px;
+        font-size: 12px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .AuthorSection{
+       
+        margin-left: 20%;
+        display: flex;
+        gap: 20px;
+    }
+    .AuthorSection img{
+        width: 300px;
+        margin-top: 30px;
+        text-align: center;
+        border-radius: 30%;
+
+    }
+</style>
+</html>

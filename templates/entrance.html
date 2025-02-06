@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRUSSE225 - Votre destination c'est chez nous</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .intro-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 8vw;
+            font-weight: bold;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: zoomIn 1.5s ease forwards;
+        }
+
+        .slogan {
+            font-size: 3vw;
+            font-style: italic;
+            opacity: 0;
+            margin-top: 10px;
+            animation: fadeInUp 2s ease forwards;
+            animation-delay: 1.5s;
+        }
+
+        .homepage {
+            display: none;
+            opacity: 0;
+            text-align: center;
+            padding: 5vw;
+            background-color: white;
+            height: 100%;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .btn {
+            width: 80%;
+            max-width: 300px;
+            height: 50px;
+            background-color: orange;
+            font-size: 1.5rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: azure;
+        }
+
+        @keyframes zoomIn {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .slogan { font-size: 4vw; }
+            .btn { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <div class="logo">MRUSSE225</div>
+        <div class="slogan">Votre destination c'est chez nous</div>
+    </div>
+
+    <div class="homepage">
+        <h1>Bienvenue sur MRUSSE225 Voyages</h1>
+        <p>Découvrez nos meilleures destinations et réservez votre prochain voyage.</p>
+        <a href="http://127.0.0.1:5500/main.html"><button class="btn">Commencez</button></a>  
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.querySelector('.intro-container').style.display = 'none';
+            document.querySelector('.homepage').style.display = 'block';
+        }, 4000);
+    </script>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}" style="padding: 10px; margin: 10px; border-radius: 5px; background-color: lightgrey;">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+</body>
+</html>
