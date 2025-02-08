@@ -59,12 +59,12 @@
            background-repeat: no-repeat;
             color: white;
             padding: 100px 20px;
-            display: flex;
+           
             align-items: center;
         }
         .hero .logo img{
-            width: 600px;
-            width: 350px;
+            width: 300px;
+           
         }
         .smsAcceuil{
             margin-left: 300px;
@@ -395,6 +395,20 @@
 
 /* Responsivité : S'adapte aux petits écrans */
 @media (max-width: 768px) {
+    .hero {
+            
+         
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero .logo img{
+            width: 300px;
+           
+        }
+        .smsAcceuil{
+            margin-left: 10px;
+        }
     .AuthorSection {
         max-width: 90%; /* Réduction de la largeur sur petits écrans */
         padding: 15px;
@@ -499,9 +513,7 @@
     </div>
 
     <section class="hero">
-        <div class="logo">
-            <img src="{{ url_for('static', filename='images/LOGO.png') }}" alt="logo">
-        </div>
+        
         <div class="smsAcceuil">
             <h1>Bienvenue chez MRUSSE225</h1>
             <p>Découvrez des expériences uniques et inoubliables à travers le monde.</p>
