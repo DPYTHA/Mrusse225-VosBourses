@@ -2,6 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="website icon" href="{{ url_for('static', filename='images/LOGO.png') }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MRUSSE225 - Votre destination c'est chez nous</title>
     <style>
@@ -108,7 +110,7 @@
     <div class="homepage">
         <h1>Bienvenue sur MRUSSE225 Voyages</h1>
         <p>Découvrez nos meilleures destinations et réservez votre prochain voyage.</p>
-        <a href="http://127.0.0.1:5500/main.html"><button class="btn">Commencez</button></a>  
+        <a href="{{ url_for('main') }}"><button class="btn">Commencez</button></a>  
     </div>
 
     <script>
