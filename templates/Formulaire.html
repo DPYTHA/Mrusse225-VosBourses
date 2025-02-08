@@ -115,6 +115,9 @@
 <body>
 
     <div class="container">
+        <div class="verSite">
+            <a href="{{ url_for('main')}}" target="_blank">Allez sur notre site internet <i class="material-icons">arrow_forward</i></a>
+        </div>
         <h2>Envoyez vos documents</h2>
         <form action="/upload" method="POST" enctype="multipart/form-data">
             <label for="prenom">Prénom :</label>
@@ -168,9 +171,7 @@
         </div>
     </div>
 
-    <div class="verSite">
-        <a href="{{ url_for('main')}}" target="_blank">Allez sur notre site internet <i class="material-icons">arrow_forward</i></a>
-    </div>
+  
     
     
 
