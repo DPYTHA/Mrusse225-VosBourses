@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="website icon" href="{{ url_for('static', filename='images/LOGO.png') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -93,8 +95,8 @@ color: orange;
 <body>
     <div class="container">
         <div class="teteAvant">
-           <a href="main.html"><i class="fa-solid fa-arrow-rotate-left"></i> Retour</a> 
-               <h1>Tourisme dans le Monde</h1>
+            <a href="{{ url_for('main') }}"><i class="material-icons">arrow_back</i>Retour</a> 
+            <h1>Tourisme dans le Monde</h1>
         </div>
      
         <p>Découvrez les conditions de voyage pour certaines destinations populaires.</p>

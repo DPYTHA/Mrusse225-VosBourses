@@ -484,6 +484,45 @@
                         opacity: 1; /* Devient visible */
                     }
                 </style>
+<style>
+    /* Style du spinner */
+    .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #000;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+        margin-top: 10px;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    </style>
+  
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const exploreLink = document.getElementById("explore-link");
+        const exploreText = document.getElementById("explore-text");
+        const spinner = document.getElementById("loading-spinner");
+    
+        function showSpinnerAndRedirect(event) {
+            event.preventDefault(); // Empêcher la redirection immédiate
+            spinner.style.display = "block"; // Afficher le spinner
+    
+            // Rediriger après un court délai
+            setTimeout(() => {
+                window.location.href = exploreLink.href;
+            }, 500); // Modifier le délai si nécessaire
+        }
+    
+        // Ajouter l'événement au lien et au texte
+        exploreLink.addEventListener("click", showSpinnerAndRedirect);
+        exploreText.addEventListener("click", showSpinnerAndRedirect);
+    });
+    </script>
 </head>
 <body>
     <header>
@@ -552,11 +591,12 @@
         </div>
         <div class="service">
             <div class="serviceexplore-more">
-                <a href="https://flaskblock.onrender.com/" >
+                <a href="https://flaskblock.onrender.com/" id="explore-link">
                     <i class="fas fa-arrow-right"></i>
-                    <h3>Explorez d'autres destinations</h3>
                 </a>
+                <h3 id="explore-text">Explorez d'autres destinations</h3>
                 <p>De nombreuses autres destinations à découvrir !</p>
+                <div id="loading-spinner" class="spinner" style="display: none;"></div>
             </div>
         </div>
 
